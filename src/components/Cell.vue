@@ -17,6 +17,7 @@
     },
     methods: {
       updateValue: function(event) {
+        console.log(this.playerOne);
         if (this.value === 3) {
           this.value = this.playerOne ? 1 : 2;
           this.$emit('valueUpdated', this.value, event.target.dataset.index);
