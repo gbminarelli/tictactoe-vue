@@ -1,5 +1,5 @@
 <template>
-  <b-col @click="updateValue($event)" class="text-center">{{ valueString }}</b-col>
+  <b-col @click="updateCell($event)" class="text-center">{{ valueString }}</b-col>
 </template>
 
 <script>
@@ -16,8 +16,7 @@
       }
     },
     methods: {
-      updateValue: function(event) {
-        console.log(this.playerOne);
+      updateCell: function(event) {
         if (this.value === 3) {
           this.value = this.playerOne ? 1 : 2;
           this.$emit('valueUpdated', this.value, event.target.dataset.index);
@@ -30,8 +29,8 @@
 
 <style scoped>
   .col {
-    line-height: 50px;
-    height: 50px;
-    width: 50px;
+    font-size: 50px;
+    line-height: 100px;
+    height: 100px;
   }
 </style>
